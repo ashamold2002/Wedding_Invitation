@@ -21,7 +21,7 @@ const BackgroundMusic = () => {
 
   return (
     <div className="music-control">
-      <audio ref={audioRef} src="/music/Anbil-Avan.mp3" loop />
+      <audio ref={audioRef} src="music/Anbil-Avan.mp3" loop />
       <button onClick={toggleMusic} className="music-btn">
         {isPlaying ? <FaPause /> : <FaPlay />}
       </button>

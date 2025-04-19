@@ -5,9 +5,9 @@ import "./Gallery.css";
 
 const Gallery = () => {
   const slides = [
-    { src: "/Images/Image.png" },
-    { src: "/Images/Image2.png" },
-    { src: "/Images/Image3.png" } 
+    { src: "Images/Image.png" },
+    { src: "Images/Image2.png" },
+    { src: "Images/Image3.png" } 
   ];
 
   const [open, setOpen] = useState(false);
