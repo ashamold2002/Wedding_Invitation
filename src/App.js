@@ -8,11 +8,13 @@ import Gallery from "./components/Gallery";
 import RSVP from "./components/RSVP";
 import Map from "./components/Map";
 import Footer from "./components/Footer";
+import BackgroundMusic from "./components/BackgroundMusic";
 import "./App.css";
 
 function App() {
   return (
     <div className="App">
+      <BackgroundMusic/>
       <Navbar />
       <Hero />
       <About />
