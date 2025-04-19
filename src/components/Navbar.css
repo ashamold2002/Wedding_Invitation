@@ -1,0 +1,120 @@
+/* src/components/Navbar.css */
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;500&display=swap');
+
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: linear-gradient(to right, #e1bee7, #b39ddb); /* Soft Lavender Gradient */
+  padding: 1.2rem 2rem;
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: background 0.3s ease-in-out;
+}
+
+.navbar-logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: 'Great Vibes', cursive;
+  font-size: 2rem;
+  color: #fff; /* White logo */
+  letter-spacing: 2px;
+  font-weight: normal;
+  text-shadow: 1px 1px 3px rgba(255, 255, 255, 0.3);
+}
+
+.navbar-links {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.1rem;
+  transition: all 0.3s ease-in-out;
+}
+
+.navbar-links li {
+  position: relative;
+}
+
+.navbar-links a {
+  text-decoration: none;
+  color: #fff; /* White text */
+  font-weight: 500;
+  transition: color 0.3s, transform 0.3s ease-in-out;
+  letter-spacing: 0.4px;
+  position: relative;
+}
+
+.navbar-links a::after {
+  content: '';
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  background: #fff; /* White underline */
+  bottom: -6px;
+  left: 0;
+  transition: width 0.3s ease;
+}
+
+.navbar-links a:hover::after {
+  width: 100%;
+}
+
+.navbar-links a:hover {
+  color: #ffe0ec; /* Soft pink hover effect */
+  transform: translateY(-3px);
+}
+
+.nav-icon {
+  color: #ffe0ec; /* Soft pink */
+  font-size: 0.9rem;
+  animation: heartbeat 1.5s infinite;
+}
+
+@keyframes heartbeat {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.3); }
+}
+
+.menu-icon {
+  display: none;
+  font-size: 2rem;
+  color: #fff;
+  cursor: pointer;
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+  .navbar-links {
+    position: absolute;
+    top: 80px;
+    right: 0;
+    background: #e1bee7; /* Soft lavender background on mobile */
+    width: 100%;
+    height: 100vh;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    transform: translateX(100%);
+    transition: transform 0.3s ease;
+  }
+
+  .navbar.mobile .navbar-links {
+    transform: translateX(0);
+  }
+
+  .menu-icon {
+    display: block;
+  }
+
+  .navbar-links a {
+    font-size: 1.5rem;
+  }
+}

@@ -1,0 +1,163 @@
+/* RSVP Section */
+#rsvp {
+  padding: 50px 0;
+  background-color: #f9f6fb; /* Light lavender background */
+  text-align: center;
+  border-radius: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  animation: fadeIn 1s forwards; /* Fade-in animation for the section */
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+#rsvp h3 {
+  font-family: 'Georgia', serif;
+  font-size: 2.5rem;
+  color: #4b4a72; /* Elegant dark lavender */
+  margin-bottom: 30px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  animation: slideInUp 1s ease-out; /* Slide-in animation for the heading */
+}
+
+@keyframes slideInUp {
+  from {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Form Styling */
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  max-width: 400px;
+  margin: 0 auto;
+  background-color: #ffffff; /* White background for form */
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  animation: fadeInUp 1.2s 0.3s forwards; /* Fade-in and slide-up animation for the form */
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+input[type="text"] {
+  width: 100%;
+  padding: 12px;
+  font-size: 1.2rem;
+  border: 1px solid #d1c9e1; /* Soft lavender border */
+  border-radius: 8px;
+  outline: none;
+  transition: border-color 0.3s ease;
+  animation: inputFadeIn 1s 0.6s forwards; /* Fade-in animation for inputs */
+}
+
+@keyframes inputFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+input[type="text"]:focus {
+  border-color: #b0a7d4; /* Focus border color */
+}
+
+label {
+  font-size: 1.1rem;
+  color: #4b4a72; /* Dark lavender text for the label */
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: 'Arial', sans-serif;
+  animation: labelFadeIn 1s 0.8s forwards; /* Fade-in animation for label */
+}
+
+@keyframes labelFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+input[type="checkbox"] {
+  accent-color: #b0a7d4; /* Soft lavender checkbox */
+  transform: scale(1.2);
+}
+
+button {
+  padding: 12px 20px;
+  font-size: 1.2rem;
+  background-color: #b0a7d4; /* Soft lavender button */
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  animation: buttonFadeIn 1s 1s forwards; /* Fade-in animation for button */
+}
+
+@keyframes buttonFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+button:hover {
+  background-color: #a18db6; /* Darker lavender on hover */
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 600px) {
+  #rsvp h3 {
+    font-size: 2rem;
+  }
+
+  form {
+    width: 90%;
+  }
+
+  input[type="text"], button {
+    font-size: 1rem;
+  }
+}

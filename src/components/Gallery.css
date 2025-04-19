@@ -1,0 +1,70 @@
+/* Gallery Section */
+#gallery {
+  padding: 50px 0;
+  background-color: #f4f3f9; /* Soft lavender background */
+  text-align: center;
+}
+
+#gallery h3 {
+  font-family: 'Georgia', serif;
+  font-size: 2.5rem;
+  color: #4b4a72; /* Elegant dark lavender */
+  margin-bottom: 30px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+/* Thumbnails */
+.image-thumbnails {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.thumbnail {
+  width: 200px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.thumbnail:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
+}
+
+/* Lightbox Styles */
+.yar-lightbox-container {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.yar-lightbox-slide img {
+  border-radius: 15px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+.yar-lightbox-prev,
+.yar-lightbox-next {
+  color: #d9d9f3; /* Soft lavender for navigation arrows */
+}
+
+.yar-lightbox-prev:hover,
+.yar-lightbox-next:hover {
+  color: #b0a7d4; /* Slightly darker lavender on hover */
+}
+
+.yar-lightbox-close {
+  color: #b0a7d4; /* Close button in a lavender shade */
+  background-color: transparent;
+  border: none;
+  font-size: 24px;
+  transition: color 0.3s ease;
+}
+
+.yar-lightbox-close:hover {
+  color: #4b4a72; /* Dark lavender on hover */
+}

@@ -1,0 +1,132 @@
+/* src/components/About.css */
+.about {
+    background: linear-gradient(to right, #f3e5f5, #e1bee7); /* Soft lavender gradient */
+    color: #6a1b9a; /* Lavender text color */
+    padding: 5rem 2rem;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .about h3 {
+    font-family: 'Great Vibes', cursive;
+    font-size: 3rem;
+    color: #6a1b9a; /* Lavender color */
+    margin-bottom: 1.5rem;
+    text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.3);
+    letter-spacing: 2px;
+  }
+  
+  .about p {
+    font-size: 1.2rem;
+    color: #6a1b9a;
+    line-height: 1.8;
+    max-width: 800px;
+    margin: 0 auto;
+    letter-spacing: 1px;
+    font-weight: 400;
+    opacity: 0; /* Initial opacity set to 0 */
+    animation: fadeIn 2s ease-out forwards; /* Apply animation with 'forwards' to maintain final state */
+  }
+  
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  
+  
+  .about p {
+    animation-delay: 1s; /* Delay for a smooth effect */
+  }
+  
+  .about .heart-animation {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    overflow: hidden;
+  }
+  
+  .heart {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    background-color: #6a1b9a; /* Lavender hearts */
+    transform: rotate(45deg);
+    animation: floatHeart 10s infinite ease-in-out;
+    opacity: 0.8;
+  }
+  
+  .heart::before,
+  .heart::after {
+    content: '';
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    background-color: #6a1b9a;
+    border-radius: 50%;
+  }
+  
+  .heart::before {
+    top: -15px;
+    left: 0;
+  }
+  
+  .heart::after {
+    left: -15px;
+    top: 0;
+  }
+  
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  
+  @keyframes floatHeart {
+    0% {
+      transform: translateY(100vh) rotate(45deg);
+      opacity: 0;
+    }
+    50% {
+      opacity: 1;
+    }
+    100% {
+      transform: translateY(-100vh) rotate(45deg);
+      opacity: 0;
+    }
+  }
+  
+  .heart:nth-child(1) { left: 5%; animation-delay: 0s; }
+  .heart:nth-child(2) { left: 15%; animation-delay: 2s; }
+  .heart:nth-child(3) { left: 25%; animation-delay: 4s; }
+  .heart:nth-child(4) { left: 35%; animation-delay: 1s; }
+  .heart:nth-child(5) { left: 45%; animation-delay: 3s; }
+  .heart:nth-child(6) { left: 55%; animation-delay: 5s; }
+  .heart:nth-child(7) { left: 65%; animation-delay: 2.5s; }
+  .heart:nth-child(8) { left: 75%; animation-delay: 1.5s; }
+  .heart:nth-child(9) { left: 85%; animation-delay: 3.5s; }
+  .heart:nth-child(10) { left: 90%; animation-delay: 6s; }
+  
+  /* Mobile Styles */
+  @media (max-width: 768px) {
+    .about h3 {
+      font-size: 2.4rem;
+    }
+  
+    .about p {
+      font-size: 1rem;
+      max-width: 90%;
+    }
+  }
+  

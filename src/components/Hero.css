@@ -1,0 +1,134 @@
+/* src/components/HeroSection.css */
+.hero {
+  position: relative;
+  background: #fff; /* White background */
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  overflow: hidden;
+  font-family: 'Poppins', sans-serif;
+  color: #6a1b9a; /* Lavender text */
+  padding: 2rem;
+}
+
+.hero-content {
+  z-index: 2;
+  max-width: 90%;
+  margin: 0 auto;
+}
+
+.hero h1 {
+  font-family: 'Great Vibes', cursive;
+  font-size: 4rem;
+  margin-bottom: 0.5rem;
+  letter-spacing: 2px;
+  color: #6a1b9a; /* Lavender color */
+  text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.3);
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin: 0.4rem 0;
+  letter-spacing: 1px;
+  color: #6a1b9a; /* Lavender color */
+}
+
+.hero .names {
+  font-family: 'Great Vibes', cursive;
+  font-size: 3rem;
+  font-weight: normal;
+  margin-top: 1rem;
+  letter-spacing: 2px;
+  color: #6a1b9a; /* Lavender color */
+}
+
+.hero .date {
+  font-size: 1.2rem;
+  font-style: italic;
+  color: #6a1b9a; /* Lavender color */
+  letter-spacing: 1px;
+  margin-top: 0.5rem;
+}
+
+.hearts {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.heart {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  background-color: #6a1b9a; /* Lavender hearts */
+  transform: rotate(45deg);
+  animation: floatHeart 10s infinite ease-in-out;
+  opacity: 0.8;
+}
+
+.heart::before,
+.heart::after {
+  content: '';
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  background-color: #6a1b9a; /* Lavender hearts */
+  border-radius: 50%;
+}
+
+.heart::before {
+  top: -15px;
+  left: 0;
+}
+
+.heart::after {
+  left: -15px;
+  top: 0;
+}
+
+@keyframes floatHeart {
+  0% {
+    transform: translateY(100vh) rotate(45deg);
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-100vh) rotate(45deg);
+    opacity: 0;
+  }
+}
+
+/* Position hearts randomly */
+.heart:nth-child(1) { left: 5%; animation-delay: 0s; }
+.heart:nth-child(2) { left: 15%; animation-delay: 2s; }
+.heart:nth-child(3) { left: 25%; animation-delay: 4s; }
+.heart:nth-child(4) { left: 35%; animation-delay: 1s; }
+.heart:nth-child(5) { left: 45%; animation-delay: 3s; }
+.heart:nth-child(6) { left: 55%; animation-delay: 5s; }
+.heart:nth-child(7) { left: 65%; animation-delay: 2.5s; }
+.heart:nth-child(8) { left: 75%; animation-delay: 1.5s; }
+.heart:nth-child(9) { left: 85%; animation-delay: 3.5s; }
+.heart:nth-child(10) { left: 90%; animation-delay: 6s; }
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 2.8rem;
+  }
+
+  .hero .names {
+    font-size: 2rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+}

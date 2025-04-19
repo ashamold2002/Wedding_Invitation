@@ -1,0 +1,49 @@
+.footer {
+    background: linear-gradient(135deg, #f3e8fd, #e6d4f6);
+    color: #5c3c8c;
+    text-align: center;
+    padding: 2rem 1rem;
+    font-family: 'Cormorant Garamond', serif;
+    border-top: 4px solid #b38ed3;
+    animation: fadeInUp 1s ease-in both;
+  }
+  
+  .footer p {
+    font-size: 1.6rem;
+    font-weight: 500;
+    margin: 0;
+    color: #6e44a3;
+    animation: pulseHeart 2s infinite;
+  }
+  
+  .footer small {
+    display: block;
+    margin-top: 0.5rem;
+    font-size: 0.9rem;
+    color: #8a6fb0;
+  }
+  
+  /* Romantic pulse animation for heart */
+  @keyframes pulseHeart {
+    0%, 100% {
+      transform: scale(1);
+      color: #c85ecb;
+    }
+    50% {
+      transform: scale(1.05);
+      color: #a944a7;
+    }
+  }
+  
+  /* Optional fade-in animation for entrance */
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(40px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
