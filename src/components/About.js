@@ -6,7 +6,7 @@ const About = () => {
     <section id="about" className="about">
       <h3>Our Love Story</h3>
       <p>
-        Two hearts, one journey. Jaison and Asha met, fell in love, and are
+        Two hearts, one journey. Jaison and Asha met, fell in love, we are
         now ready to start a new chapter together. We are so excited to
         celebrate this special day with you.
       </p>
