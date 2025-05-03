@@ -4,17 +4,21 @@ import ScrollButton from "./ScrollButton";
 
 const Countdown = () => {
   const calculateTimeLeft = () => {
-    const difference = +new Date("2025-05-28") - +new Date();
+    const targetDate = new Date("2025-05-28T10:30:00"); // YYYY-MM-DDTHH:mm:ss format
+    const now = new Date();
+    const difference = targetDate - now;
+  
     let timeLeft = {};
-
+  
     if (difference > 0) {
       timeLeft = {
         Days: Math.floor(difference / (1000 * 60 * 60 * 24)),
         Hours: Math.floor((difference / (1000 * 60 * 60)) % 24),
         Minutes: Math.floor((difference / 1000 / 60) % 60),
-        Seconds: Math.floor((difference / 1000) % 60)
+        Seconds: Math.floor((difference / 1000) % 60),
       };
     }
+  
     return timeLeft;
   };
 
